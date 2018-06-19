@@ -1,0 +1,117 @@
+
+#shopProducts .shopProductsContainer {
+  width: 400px;
+  height: 1400px;
+  margin: 12px;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+}
+
+#shopProducts .shopInfoWrapper { 
+  left: 50%;
+  font-size: 18px;
+}
+
+#shopProducts .shopLogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#shopProducts .shopLocation {
+  font-size: 14px;
+  color: gray;
+}
+
+#shopProducts .productInfoWrapper {
+  top: 20px;
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+  font-size: 14px;
+  text-align: left;
+}
+
+#shopProducts .productName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 8px;
+}
+
+#shopProducts .price {
+  font-weight: bold; 
+  float: left;
+  padding-left: 3px;
+}
+
+
+#shopProducts .bold {
+  font-weight: bold; 
+}
+
+#shopProducts .shippingInfo {
+  color: gray;
+  font-weight: normal;
+  font-size: 80%;
+}
+
+#shopProducts .img-thumbnail {
+  width: 185px;
+  height: 150px;
+}
+
+#shopProducts .carousel-item {
+  width: 185px;
+  height: 150px;
+}
+
+#shopProducts .carousel-indicators li{
+  border-radius: 12px;
+  width: 6px;
+  height: 6px;
+}
+
+#shopProducts .indicator {
+  margin-bottom: 0rem;
+}
+
+#shopProducts .prodImg {
+  width: 185px;
+  height: 150px;
+}
+
+#shopProducts .searchBarWrapper {
+  margin-bottom: 1rem!important;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid #ced4da;
+}
+
+#shopProducts .searchButton {
+  margin-right: -1px;
+  display: flex;
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-repeat: no-repeat;
+  background-position: 5px 5px;
+  background-size: 18px 18px;
+  border: none;
+  width: 30px;
+  border-right-color: white;
+  box-sizing: border-box;
+}
+
+#shopProducts .searchInput {
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 14px;
+  color: gray;
+  padding-bottom: 4px;
+  box-sizing: border-box;
+  border: none;
+}

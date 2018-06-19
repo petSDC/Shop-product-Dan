@@ -1,0 +1,62 @@
+{
+  "name": "shop-products",
+  "version": "",
+  "description": "petsy shop products component",
+  "private": true,
+  "author": "Xue",
+  "license": "",
+  "engines": {
+    "node": ">=6.13.0"
+  },
+  "scripts": {
+    "start": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
+    "lint": "eslint src",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.1.1",
+    "express": "^4.16.3",
+    "jquery": "^3.3.1",
+    "mysql": "^2.15.0",
+    "popper.js": "^1.14.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-responsive-carousel": "^3.1.39",
+    "request": "^2.87.0",
+    "save": "^2.3.2",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "http-proxy-middleware": "^0.18.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.1.0",
+    "puppeteer": "^1.5.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.5"
+  },
+  "jest": {
+    "setupFiles": [
+      "./test/test.js"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "identity-obj-proxy"
+    }
+  }
+}
