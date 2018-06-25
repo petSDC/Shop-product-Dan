@@ -60,7 +60,8 @@ class ShopProducts extends React.Component {
   getShopProductInfo() {
     axios.get(`${window.location.pathname}shopproducts/`)
       .then((response) => {
-        const products = response.data[1];
+        console.log('THIS IS THE DATA:', response.data)
+        const products = response.data.rows.slice(1);
         const sortByProductsId = {};
         products.forEach((item) => {
           let prodName = item.name;
@@ -74,7 +75,7 @@ class ShopProducts extends React.Component {
             };
         });
         this.setState({
-          shopInfo: response.data[0][0],
+          shopInfo: response.data.rows[0],
           shopProducts: sortByProductsId,
           displayProducts: sortByProductsId,
         });
