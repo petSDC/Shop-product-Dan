@@ -1,0 +1,21 @@
+config: 
+  target: "http://localhost:5000"
+  processor: "./randomizer.js"
+  phases: 
+    - duration: 10
+      arrivalRate: 1
+    - duration: 10
+      arrivalRate: 1
+      rampTo: 5
+    - duration: 30
+      arrivalRate: 5
+  defaults:
+    headers:
+      x-my-service-auth: "987401838271002188298567"
+
+scenarios:
+  - flow: 
+    - function: "randomNumberGenerator"
+    - get:
+        url: "/{{ productId }}/shopproducts"
+    - log: "Current ID: {{ productId }}"
