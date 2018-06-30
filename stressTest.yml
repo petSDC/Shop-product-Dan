@@ -1,21 +1,25 @@
 config: 
   target: "http://localhost:5000"
-  processor: "./randomizer.js"
+  # processor: "./randomizer.js"
   phases: 
-    - duration: 10
-      arrivalRate: 1
-    - duration: 10
-      arrivalRate: 1
-      rampTo: 5
-    - duration: 30
-      arrivalRate: 5
+    # - duration: 5
+    #   arrivalRate: 1
+    #   rampTo: 5
+    - duration: 295
+      arrivalRate: 2
+
   defaults:
     headers:
       x-my-service-auth: "987401838271002188298567"
 
 scenarios:
-  - flow: 
-    - function: "randomNumberGenerator"
-    - get:
-        url: "/{{ productId }}/shopproducts"
-    - log: "Current ID: {{ productId }}"
+  - name: 'Eighty'
+    weight: 4
+    flow: 
+      - get:
+          url: "/{{ $randomNumber(1, 2000000) }}/shopproducts"
+  - name: 'Twenty'
+    weight: 1
+    flow: 
+      - get:
+          url: "/{{ $randomNumber(2000000, 10000000) }}/shopproducts"
